@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
 
 :root {
@@ -44,6 +43,77 @@ body::before {
   }
 }
 
+/* Layout for large screens: two columns */
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.box {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+   padding: 10px 20px;
+  text-align: center;
+  flex: 1;
+  margin: 10px;
+}
+
+.box.large {
+  flex: 2;
+}
+
+/* Estilo general para los enlaces en dispositivos móviles */
+#links {
+display: flex;
+flex-direction: column;
+align-items: center; /* Centra los enlaces horizontalmente */
+}
+
+#links a {
+display: block;
+width: 100%; /* Ocupa el ancho disponible del contenedor */
+max-width: 300px; /* Establece un ancho máximo para los enlaces */
+margin: 9px 0; /* Espacio entre los botones */
+padding: 10px;
+border: 2px solid var(--accentColor);
+border-radius: 8px; /* Bordes redondeados */
+text-align: center;
+color: var(--accentColor);
+text-decoration: none;
+transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efecto al pasar el cursor */
+#links a:hover {
+background-color: var(--accentColor);
+color: var(--bgColor);
+}
+
+/* Estilo específico para pantallas pequeñas */
+@media (max-width: 768px) {
+#links {
+  padding: 0 10px; /* Añade un poco de espacio en los lados del contenedor */
+}
+}
+
+
+@media (max-width: 480px) {
+  /* Stack boxes on top of each other on small screens */
+  .container {
+    flex-direction: column;
+  }
+
+  .box {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
 #profilePicture, #profilePicture img {
   position: relative;
   width: 96px;
@@ -74,13 +144,6 @@ h2 {
   padding: 10px 0;
 }
 
-#links {
-  max-width: 675px;
-  margin: 27px auto;
-  text-align: center;
-  padding: 0 10px;
-}
-
 .logos a {
   color: white;
   font-size: 24px;
@@ -92,29 +155,10 @@ h2 {
   color: #ccc;
 }
 
-.link {
-  background-color: transparent;
-  color: var(--accentColor);
-  border: solid var(--accentColor) 2px;
-  border-radius: 10px;
-  font-size: 1rem;
-  text-align: center;
-  margin-bottom: 10px;
-  padding: 10px;
-  display: inline-block;
-  text-decoration: none;
-  margin: 0 10px;
-  transition: all .25s ease;
-}
-
-.link:hover {
-  background-color: var(--accentColor);
-  color: var(--bgColor);
-}
 
 #hashtag {
   color: var(--accentColor);
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
   background: linear-gradient(90deg, var(--bgColor), var(--accentColor), var(--bgColor));
   background-size: 80%;
@@ -142,72 +186,5 @@ h2 {
   100% {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  #profilePicture, #profilePicture img {
-    width: 72px;
-    height: 72px;
-  }
-
-  #userName {
-    font-size: 1.25rem;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-  }
-
-  .logos {
-    font-size: 1.5rem;
-  }
-
-  .logos a {
-    font-size: 20px;
-    margin-right: 15px;
-  }
-
-  .link {
-    font-size: 0.875rem;
-    padding: 8px;
-  }
-
-  #hashtag {
-    font-size: 0.875rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #profilePicture, #profilePicture img {
-    width: 60px;
-    height: 60px;
-  }
-
-  #userName {
-    font-size: 1rem;
-  }
-
-  h2 {
-    font-size: 1rem;
-  }
-
-  .logos {
-    font-size: 1.25rem;
-  }
-
-  .logos a {
-    font-size: 18px;
-    margin-right: 10px;
-  }
-
-  .link {
-    font-size: 0.75rem;
-    padding: 6px;
-  }
-
-  #hashtag {
-    font-size: 0.75rem;
   }
 }

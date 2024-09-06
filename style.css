@@ -85,7 +85,7 @@ border-radius: 20px; /* Bordes redondeados */
 text-align: center;
 color: var(--accentColor);
 text-decoration: none;
-transition: background-color 0.3s, color 0.3s;
+transition: background-color 0.2s, color 0.2s;
 }
 
 /* Efecto al pasar el cursor */

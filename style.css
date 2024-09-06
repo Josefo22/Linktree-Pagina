@@ -67,44 +67,40 @@ body::before {
   flex: 2;
 }
 
-/* Estilo general para los enlaces en dispositivos móviles */
 #links {
 display: flex;
 flex-direction: column;
-align-items: center; /* Centra los enlaces horizontalmente */
+align-items: center; 
 }
 
 #links a {
 display: block;
-width: 100%; /* Ocupa el ancho disponible del contenedor */
-max-width: 350px; /* Establece un ancho máximo para los enlaces */
-margin: 10px 0; /* Espacio entre los botones */
+width: 100%; 
+max-width: 350px; 
+margin: 10px 0; 
 padding: 10px;
 border: 2px solid var(--accentColor);
-border-radius: 20px; /* Bordes redondeados */
+border-radius: 20px; 
 text-align: center;
 color: var(--accentColor);
 text-decoration: none;
 transition: background-color 0.2s, color 0.2s;
 }
 
-/* Efecto al pasar el cursor */
 #links a:hover {
 background-color: var(--accentColor);
 color: var(--bgColor);
 }
 
-/* Estilo específico para pantallas pequeñas */
 @media (max-width: 768px) {
 #links {
-  padding: 0 10px; /* Añade un poco de espacio en los lados del contenedor */
+  padding: 0 10px; 
 }
 }
 
 
 @media (max-width: 480px) {
-  /* Stack boxes on top of each other on small screens */
-  .container {
+   .container {
     flex-direction: column;
   }
 
@@ -168,7 +164,6 @@ h2 {
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 
-/* Animations */
 @keyframes animate {
   0% {
     background-position: -500%;

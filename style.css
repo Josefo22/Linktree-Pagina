@@ -18,7 +18,9 @@ html, body {
   animation-fill-mode: forwards;
   overflow: hidden;
 }
-
+.h2{
+  font-size: 1rem;
+}
 /* Lightning effect */
 body::before {
   content: "";

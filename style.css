@@ -78,7 +78,7 @@ align-items: center; /* Centra los enlaces horizontalmente */
 display: block;
 width: 100%; /* Ocupa el ancho disponible del contenedor */
 max-width: 350px; /* Establece un ancho máximo para los enlaces */
-margin: 9px 0; /* Espacio entre los botones */
+margin: 10px 0; /* Espacio entre los botones */
 padding: 10px;
 border: 2px solid var(--accentColor);
 border-radius: 20px; /* Bordes redondeados */

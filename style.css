@@ -81,7 +81,7 @@ max-width: 350px; /* Establece un ancho máximo para los enlaces */
 margin: 9px 0; /* Espacio entre los botones */
 padding: 10px;
 border: 2px solid var(--accentColor);
-border-radius: 20px; /* Bordes redondeados */
+border-radius: 15px; /* Bordes redondeados */
 text-align: center;
 color: var(--accentColor);
 text-decoration: none;
